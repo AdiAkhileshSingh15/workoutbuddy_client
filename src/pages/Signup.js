@@ -18,7 +18,7 @@ const Signup = () => {
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch('/api/user/signup', {
+        const response = await fetch('https://workoutapi-fjcr.onrender.com/api/user/signup', {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
