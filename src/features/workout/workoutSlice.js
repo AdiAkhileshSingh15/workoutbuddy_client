@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'
-const url = 'https://workoutapi-fjcr.onrender.com/api/workouts'
+const url = '/api/workouts'
 
 const initialState = {
     workouts: null,
