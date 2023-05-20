@@ -34,6 +34,10 @@ const workoutSlice = createSlice({
         },
         deleteWorkout: (state, action) => {
             state.workouts = state.workouts.filter((w) => w._id !== action.payload._id)
+        },
+        updateWorkout: (state, action) => {
+            state.workouts = state.workouts.filter((w) => w._id !== action.payload._id)
+            state.workouts = [action.payload, ...state.workouts]
         }
     },
     extraReducers: (builder) => {
@@ -52,6 +56,6 @@ const workoutSlice = createSlice({
     },
 })
 
-export const { createWorkout, deleteWorkout } = workoutSlice.actions
+export const { createWorkout, deleteWorkout, updateWorkout } = workoutSlice.actions
 
 export default workoutSlice.reducer
